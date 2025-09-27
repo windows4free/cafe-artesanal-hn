@@ -1,8 +1,7 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f1e9;
+  background: #faf7f2; /* fondo más claro y suave */
   color: #333;
 }
 
@@ -12,14 +11,12 @@ body {
   padding: 0 1em;
 }
 
-
 header {
-  background: #6f4e37;
+  background: #a1866f; /* café claro suave */
   color: #fff;
   padding: 1em;
   text-align: center;
 }
-
 
 .logo-perfil {
   display: flex;
@@ -45,14 +42,12 @@ header p {
   margin-top: 0.5em;
 }
 
-
 .titulo-seccion {
   text-align: center;
   font-size: 1.8em;
   margin: 1em 0;
-  color: #6f4e37;
+  color: #8c6e54; /* café intermedio más suave */
 }
-
 
 .lista-productos {
   display: grid;
@@ -64,35 +59,42 @@ header p {
   background: #fff;
   padding: 1em;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* sombra más suave */
   text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-3px);
 }
 
 .producto img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+  width: 200px; /* Ajusta según el tamaño deseado */
+  height: 200px; /* Ajusta según el tamaño deseado */
+  object-fit: cover; /* Esto asegura que la imagen ocupe todo el espacio sin distorsionar */
+  border-radius: 4px; /* Si quieres mantener las esquinas redondeadas */
+  border: 2px solid #ccc; /* Opcional: añade un borde para mejorar la visualización */
+  display: block; /* Para que las imágenes estén en línea y controladas por width/height */
+  margin: 0 auto; /* Centra la imagen dentro del producto */
 }
 
 .producto h3 {
   margin: 0.5em 0 0.2em 0;
   font-size: 1.2em;
-  color: #6f4e37;
+  color: #8c6e54; /* títulos en café intermedio */
 }
 
 .producto p {
   font-size: 0.9em;
 }
 
-
 footer {
   text-align: center;
   padding: 1em;
-  background: #6f4e37;
+  background: #a1866f; /* mismo café claro que el header */
   color: #fff;
   margin-top: 2em;
 }
-
 
 @media (min-width: 768px) {
   header {
@@ -114,14 +116,12 @@ footer {
   }
 }
 
-
 @media (min-width: 992px) {
   .lista-productos {
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
   }
 }
-
 
 @media (min-width: 1200px) {
   .lista-productos {
